@@ -1,0 +1,175 @@
+html {
+    margin: 0px;
+}
+
+.navbar {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+
+.footer-fluid {
+    background-color: #000000;
+    padding-top: 11px;
+    color: #d9d9d9;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top {
+    background: rgba(50, 50, 50, 0.3);
+    width: 50PX;
+    height: 50PX;
+    border-radius: 50%;
+    text-align: center;
+    padding: 9px 12px 12px 12px;
+    box-sizing: border-box;
+    bottom: 15px;
+    right: 15px;
+    position: fixed;
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 12px;
+    transition-duration: .6s;
+    transition-delay: .4s;
+    transition-property: all;
+}
+
+.top:hover {
+    background: red;
+    transition: background .6s linear;
+}
+
+.carousel-inner {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: #595757 0.1em 0.1em 0.3em;
+    letter-spacing: 1.2px;
+}
+
+
+/* 以下是design的css */
+
+.box {
+    height: 300px;
+    width: 500px;
+    position: inherit;
+    overflow: hidden;
+}
+
+.box-img img {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.box:hover .box-img {
+    transform: scale(1.2);
+}
+
+.box .box-img {
+    transition-duration: 1.2s;
+    transition-delay: 0.2s;
+    transition-property: all;
+    height: 100%;
+}
+
+.timeline-section {
+    position: relative;
+}
+
+.timeline-section:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 1;
+    /* top 跟 bottom 設定軸線的方向 */
+    left: 50%;
+    /* 讓線定位在中央，但是軸線會從左邊 50% 起往右畫 3px，造成軸線偏右 */
+    width: 3px;
+    transform: translateX(-50%);
+    /* transform 是 CSS 的變形方式，其中包含位移，這邊用來修正軸線偏右 */
+    background-color: #595757;
+    /* 寬度跟顏色把線畫出來 */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.timeline-pointer {
+    position: relative;
+}
+
+.timeline-pointer:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid red;
+    transform: translateX(-50%);
+    background-color: red;
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .timeline-section:after,
+    .timeline-pointer:after {
+        display: none;
+    }
+}
+
+.container {
+    padding: 30px;
+    font-family: monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.col-4:hover .img-fluid {
+    transform: rotate(5deg) scale(0.88);
+}
+
+.col-4 .img-fluid {
+    transition-duration: 0.6s;
+    transition-delay: 0.1s;
+    transition-property: all;
+}
+
+.text-bottom {
+    transition-duration: 0.6s;
+    transition-delay: 0.1s;
+    transition-property: all;
+}
+
+.text-bottom:hover {
+    color: red;
+    transform: color;
+}
+
+
+/* 以上是design的css */
+
+.card {
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition-delay: 0.1s;
+    transition-duration: 0.6s;
+    transition-property: all;
+}
+
+.card:hover {
+    color: red;
+    transition: color .6s linear;
+}
+
+.card-img-top {
+    overflow: hidden;
+}
